@@ -43,6 +43,13 @@ public class Faction : MonoBehaviour
     [SerializeField] private Transform ghostBuildingParent;
     public Transform GhostBuildingParent { get { return ghostBuildingParent; } }
 
+    [SerializeField]
+    private Transform startPosition; //start position for Faction
+    public Transform StartPosition { get { return startPosition; } }
+    
+    [SerializeField]
+    private int newResourceRange = 50; //range for worker to find new resource
+
     void Start()
     {
         
@@ -108,6 +115,74 @@ public class Faction : MonoBehaviour
         wood -= building.StructureCost.wood;
         gold -= building.StructureCost.gold;
         stone -= building.StructureCost.stone;
+    }
+    public Vector3 GetHQSpawnPos()
+    {
+        foreach (Building b in aliveBuildings)
+        {
+            if (b.IsHQ)
+                return b.SpawnPoint.position;
+        }
+        return startPosition.position;
+    }
+    public void GainResource(ResourceType resourceType, int amount)
+    {
+        switch (resourceType)
+        {
+            case ResourceType.Food:
+                food += amount;
+                break;
+            case ResourceType.Wood:
+                wood += amount;
+                break;
+            case ResourceType.Gold:
+                gold += amount;
+                break;
+            case ResourceType.Stone:
+                stone += amount;
+                break;
+        }
+
+        if (this == GameManager.instance.MyFaction)
+            MainUI.instance.UpdateAllResource(this);
+    }
+    // gets the closest resource to the position (random between nearest 3 for some variance)
+    public ResourceSource GetClosestResource(Vector3 pos, ResourceType rType)
+    {
+        ResourceSource[] closest = new ResourceSource[2];
+        float[] closestDist = new float[2];
+
+        foreach (ResourceSource resource in ResourceManager.instance.Resources)
+        {
+            if (resource == null)
+                continue;
+
+            if (resource.RsrcType == rType)
+            {
+                float dist = Vector3.Distance(pos, resource.transform.position);
+
+                if (dist <= newResourceRange)
+                {
+                    for (int x = 0; x < closest.Length; x++)
+                    {
+                        if (closest[x] == null)
+                        {
+                            closest[x] = resource;
+                            closestDist[x] = dist;
+                            break;
+                        }
+                        else if (dist < closestDist[x])
+                        {
+                            closest[x] = resource;
+                            closestDist[x] = dist;
+                            break;
+                        }
+
+                    }
+                }
+            }
+        }
+        return closest[UnityEngine.Random.Range(0, closest.Length)];
     }
 
 }

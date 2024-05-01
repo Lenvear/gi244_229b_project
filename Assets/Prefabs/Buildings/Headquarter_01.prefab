@@ -82,11 +82,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd476c19016e2824485d07dc0c65ee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faction: {fileID: 0}
   structureName: Building
   structurePic: {fileID: 21300000, guid: 5d72d652a3fa8a443b8e06cbdec83fd1, type: 3}
   curHP: 0
   maxHP: 50
-  faction: {fileID: 0}
   selectionVisual: {fileID: 6737731051725688371}
   structureCost:
     food: 75
@@ -100,7 +100,7 @@ MonoBehaviour:
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
-  isFunctional: 0
+  isFunctional: 1
   isHQ: 0
   intoTheGround: 5
 --- !u!65 &3936983044991586939

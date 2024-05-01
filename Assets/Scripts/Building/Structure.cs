@@ -14,6 +14,11 @@ public struct StructureCost
 public abstract  class Structure : MonoBehaviour
 {
     [SerializeField]
+    protected Faction faction;
+    public Faction Faction { get { return faction; }
+        set { faction = value; }
+    }
+    [SerializeField]
     protected string structureName;
     public string StructureName { get { return structureName; } }
 
@@ -27,12 +32,6 @@ public abstract  class Structure : MonoBehaviour
     [SerializeField]
     protected int maxHP;
     public int MaxHP { get { return maxHP; } set {  maxHP = value; } }
-
-    [SerializeField]
-    protected Faction faction;
-    public Faction Faction { get { return faction; }
-        set { faction = value; }
-    }
 
     [SerializeField]
     protected GameObject selectionVisual;
