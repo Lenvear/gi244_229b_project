@@ -1356,7 +1356,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
+  - {fileID: 2100000, guid: ce19f20337e1d6545bddd9bc3ba7de65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2272,7 +2272,7 @@ Transform:
   - {fileID: 4834161357715206}
   - {fileID: 4347998713884544}
   - {fileID: 4633407244678912}
-  - {fileID: 1141229534189367859}
+  - {fileID: 3422796179126940783}
   m_Father: {fileID: 4482757831851448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343414112301952
@@ -4304,9 +4304,9 @@ GameObject:
   - component: {fileID: 1707833043558466727}
   - component: {fileID: 8431933652477882322}
   - component: {fileID: 3560338978924745311}
-  - component: {fileID: 2310433980128552339}
+  - component: {fileID: 4988939333065177789}
   m_Layer: 6
-  m_Name: Soldier
+  m_Name: BritishSoldier
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4424,8 +4424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: {fileID: 0}
   id: 0
-  unitName: Soldier
-  unitPic: {fileID: 21300000, guid: 4acd3eb6c3d48ba4f93dd617b32f1ac3, type: 3}
+  unitName: Brit.Regular
+  unitPic: {fileID: 21300000, guid: 3b01a104ff55159418a109c1e3c24a1d, type: 3}
   curHP: 100
   maxHP: 100
   moveSpeed: 5
@@ -4441,7 +4441,7 @@ MonoBehaviour:
     wood: 10
     gold: 20
     stone: 0
-  unitWaitTime: 0.05
+  unitWaitTime: 0.1
   isBuilder: 0
   builder: {fileID: 0}
   isWorker: 0
@@ -4465,7 +4465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7456c38f91ac9e4892ffb1bea191f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2310433980128552339
+--- !u!114 &4988939333065177789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6279,7 +6279,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &1141229534189565149
+--- !u!1001 &3422796179126874753
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6336,10 +6336,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb098a365e79e5742a8bf7f97cfb129e, type: 3}
---- !u!4 &1141229534189367859 stripped
+--- !u!4 &3422796179126940783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460526, guid: eb098a365e79e5742a8bf7f97cfb129e, type: 3}
-  m_PrefabInstance: {fileID: 1141229534189565149}
+  m_PrefabInstance: {fileID: 3422796179126874753}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7958021988904074570
 PrefabInstance:

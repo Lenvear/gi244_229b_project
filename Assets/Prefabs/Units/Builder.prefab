@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 7484367525034192105}
   - component: {fileID: -5172327646642089417}
   - component: {fileID: 730541562007517141}
+  - component: {fileID: 1709362230853137941}
   m_Layer: 6
   m_Name: Builder
   m_TagString: Unit
@@ -490,19 +491,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bebfebc057ccf43b152f4b45f3bb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faction: {fileID: 0}
   id: 2
   unitName: Builder
   unitPic: {fileID: 21300000, guid: 4d8fabc9728c2de43953853d9b420d94, type: 3}
-  curHP: 0
-  maxHP: 100
-  moveSpeed: 5
-  minWpnDamage: 0
-  maxWpnDamage: 0
-  armour: 0
-  visualRange: 0
-  weaponRange: 0
+  curHP: 80
+  maxHP: 80
+  moveSpeed: 6
+  minWpnDamage: 10
+  maxWpnDamage: 20
+  armour: 1
+  visualRange: 12
+  weaponRange: 3
   state: 0
-  faction: {fileID: 0}
   selectionVisual: {fileID: 7100143014516463065}
   unitCost:
     food: 50
@@ -516,6 +517,11 @@ MonoBehaviour:
   worker: {fileID: 0}
   pathUpdateRate: 1
   lastPathUpdateTime: 0
+  curEnemyUnitTarget: {fileID: 0}
+  curEnemyBuildingTarget: {fileID: 0}
+  attackRate: 1
+  lastAttackTime: 0
+  defendRange: 30
 --- !u!114 &7484367525034192105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +575,18 @@ MonoBehaviour:
   amountCarry: 0
   maxCarry: 25
   carryType: 0
+--- !u!114 &1709362230853137941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2223b3d404154ca489220a360d854879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112460
 GameObject:
   m_ObjectHideFlags: 0
