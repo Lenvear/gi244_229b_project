@@ -91,8 +91,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12, y: 4, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: 12, y: 6, z: 10}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!208 &-799284607710290467
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -103,11 +103,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 4.5, y: 2, z: 3.5}
+  m_Extents: {x: 4.5, y: 3, z: 3.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 3, z: 0}
   m_TimeToStationary: 0.5
 --- !u!54 &7131150981122557032
 Rigidbody:
@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2317226, guid: aac9c1a836afea640963b9afeffd9f6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78edba5dc4cc2684c8e99f363873ff77, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

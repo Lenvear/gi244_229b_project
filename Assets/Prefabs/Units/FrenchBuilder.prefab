@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 730541562007517141}
   - component: {fileID: 1709362230853137941}
   m_Layer: 6
-  m_Name: Builder
+  m_Name: FrenchBuilder
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,13 +549,15 @@ MonoBehaviour:
   toBuild: 0
   showGhost: 0
   buildingList:
-  - {fileID: 2991012978293428157, guid: 4b453bdd8a4d5654cb3d082eebbcecff, type: 3}
-  - {fileID: 2991012978293428157, guid: 02b141b262167aa46b8700b9da8fdc88, type: 3}
-  - {fileID: 6712598103280381623, guid: ff6aa27150651c742b8e9f00275527d4, type: 3}
+  - {fileID: 2991012978293428157, guid: aa720c1ad4feb964ab83be2d62fe1830, type: 3}
+  - {fileID: 2609207242791517721, guid: b642f46544826d14c9a031334a7dccee, type: 3}
+  - {fileID: 6712598103280381623, guid: 919e27185a627de409f91ff52412c16b, type: 3}
+  - {fileID: 2991012978293428157, guid: 9a12cbe61252faa4ba6ec1aa59f2d1dc, type: 3}
   ghostBuildingList:
-  - {fileID: 2991012978293428157, guid: 7c24abb9f21af464ca5202b9e9128631, type: 3}
-  - {fileID: 2991012978293428157, guid: 7150525e307a76248b78c29becf1d592, type: 3}
-  - {fileID: 6712598103280381623, guid: 52672a66ba2c5334fad50b6acb7063f1, type: 3}
+  - {fileID: 2991012978293428157, guid: 7e876ebd781508e4dba39c0c454af92d, type: 3}
+  - {fileID: 2609207242791517721, guid: ded603d7778169b41b69a9afc9952953, type: 3}
+  - {fileID: 6712598103280381623, guid: 613cf4ef12d041b4292989e3a79a44e0, type: 3}
+  - {fileID: 2991012978293428157, guid: 104a20e6cc2c2134e8ca532395a05d23, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
@@ -2584,7 +2586,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
+  - {fileID: 2100000, guid: 5e1235b2e417983469723d36f05de88d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6460,6 +6462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 449.996
       objectReference: {fileID: 0}
+    - target: {fileID: 2387350, guid: fb6b90f44f1ece04cbcfd7d068f1436a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68cc9bc1692dabf4596c958ffe06eae6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
