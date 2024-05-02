@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8520621207688517281}
   - component: {fileID: 4574316474579914361}
   m_Layer: 7
-  m_Name: Headquarter_01
+  m_Name: Br_Barrack
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,10 +83,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: {fileID: 0}
-  structureName: Building
+  structureName: Barrack
   structurePic: {fileID: 21300000, guid: 5d72d652a3fa8a443b8e06cbdec83fd1, type: 3}
   curHP: 0
-  maxHP: 50
+  maxHP: 90
   selectionVisual: {fileID: 6737731051725688371}
   structureCost:
     food: 75
@@ -95,13 +95,17 @@ MonoBehaviour:
     stone: 50
   spawnPoint: {fileID: 5143969563032494251}
   rallyPoint: {fileID: 1393780499179038802}
-  unitPrefabs: []
+  unitPrefabs:
+  - {fileID: 1659822698518960, guid: df7b70dc902fe7d45a8253a5bbaff665, type: 3}
+  - {fileID: 1659822698518960, guid: 6ae6fb084e6d3e448bbe926f0bf4eb73, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
-  isFunctional: 1
+  isFunctional: 0
   isHQ: 0
+  isHousing: 0
+  isBarrack: 1
   intoTheGround: 5
 --- !u!65 &3936983044991586939
 BoxCollider:

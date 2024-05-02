@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: {fileID: 0}
-  id: 2
+  id: 0
   unitName: Builder
   unitPic: {fileID: 21300000, guid: 4d8fabc9728c2de43953853d9b420d94, type: 3}
   curHP: 80
@@ -549,11 +549,13 @@ MonoBehaviour:
   toBuild: 0
   showGhost: 0
   buildingList:
-  - {fileID: 2991012978293428157, guid: 02b141b262167aa46b8700b9da8fdc88, type: 3}
   - {fileID: 2991012978293428157, guid: 4b453bdd8a4d5654cb3d082eebbcecff, type: 3}
+  - {fileID: 2991012978293428157, guid: 02b141b262167aa46b8700b9da8fdc88, type: 3}
+  - {fileID: 6712598103280381623, guid: ff6aa27150651c742b8e9f00275527d4, type: 3}
   ghostBuildingList:
-  - {fileID: 2991012978293428157, guid: 7150525e307a76248b78c29becf1d592, type: 3}
   - {fileID: 2991012978293428157, guid: 7c24abb9f21af464ca5202b9e9128631, type: 3}
+  - {fileID: 2991012978293428157, guid: 7150525e307a76248b78c29becf1d592, type: 3}
+  - {fileID: 6712598103280381623, guid: 52672a66ba2c5334fad50b6acb7063f1, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
