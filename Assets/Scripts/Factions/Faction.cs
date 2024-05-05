@@ -9,8 +9,8 @@ public enum Nation
     Pirates,
     France,
     Spain,
-    Portuguese,
-    Dutch
+    Portugal,
+    Netherland
 }
 public class Faction : MonoBehaviour
 {
@@ -242,5 +242,40 @@ public class Faction : MonoBehaviour
 
         return true;
     }
+
+    public Color GetNationColor()
+    {
+        Color col;
+
+        switch(nation)
+        {
+            case Nation.Neutral:
+                col = Color.white;
+                break;
+            case Nation.Britain:
+                col = Color.red;
+                break;
+            case Nation.Pirates:
+                col = Color.black;
+                break;
+            case Nation.France:
+                col = Color.blue;
+                break;
+            case Nation.Spain:
+                col = Color.yellow;
+                break;
+            case Nation.Portugal:
+                col = Color.green;
+                break;
+            case Nation.Netherland:
+                col = new Color32 (255, 157, 0, 255);
+                break;
+            default:
+                col = Color.white;
+                break;
+        }
+        return col;
+    }
+
 
 }
