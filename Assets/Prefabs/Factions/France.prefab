@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &201991830737705832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3562640284991897512}
+  m_Layer: 0
+  m_Name: StartPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3562640284991897512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201991830737705832}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.646873, y: 32.81476, z: -261.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4554875360383990336}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933817055742869070
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +135,7 @@ GameObject:
   - component: {fileID: 4554875360383990336}
   - component: {fileID: 6004894648429260350}
   m_Layer: 0
-  m_Name: Pirates
+  m_Name: France
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,14 +150,14 @@ Transform:
   m_GameObject: {fileID: 4606762607695283890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10.9, y: 0, z: 78.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2136795692292548375}
   - {fileID: 189840606378715738}
   - {fileID: 1110248046154954810}
-  - {fileID: 2394165932356356046}
+  - {fileID: 3562640284991897512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6004894648429260350
@@ -141,45 +172,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edfe18f224e8eb439bdf118f82f2ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nation: 0
-  food: 0
-  wood: 0
-  gold: 0
-  stone: 0
+  nation: 3
+  food: 1000
+  wood: 600
+  gold: 500
+  stone: 200
   aliveUnits: []
-  aliveBuildings: []
+  aliveBuildings:
+  - {fileID: 0}
   unitsParent: {fileID: 2136795692292548375}
   buildingsParent: {fileID: 189840606378715738}
   ghostBuildingParent: {fileID: 1110248046154954810}
-  startPosition: {fileID: 2394165932356356046}
---- !u!1 &7749609684586743271
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2394165932356356046}
-  m_Layer: 0
-  m_Name: StartPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2394165932356356046
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7749609684586743271}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4554875360383990336}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  startPosition: {fileID: 3562640284991897512}
+  newResourceRange: 50
+  buildingPrefabs:
+  - {fileID: 2991012978293428157, guid: aa720c1ad4feb964ab83be2d62fe1830, type: 3}
+  - {fileID: 2609207242791517721, guid: b642f46544826d14c9a031334a7dccee, type: 3}
+  - {fileID: 6712598103280381623, guid: 919e27185a627de409f91ff52412c16b, type: 3}
+  - {fileID: 2991012978293428157, guid: 9a12cbe61252faa4ba6ec1aa59f2d1dc, type: 3}
+  ghostbuildingPrefabs:
+  - {fileID: 2991012978293428157, guid: 7e876ebd781508e4dba39c0c454af92d, type: 3}
+  - {fileID: 2609207242791517721, guid: ded603d7778169b41b69a9afc9952953, type: 3}
+  - {fileID: 6712598103280381623, guid: 613cf4ef12d041b4292989e3a79a44e0, type: 3}
+  - {fileID: 2991012978293428157, guid: 104a20e6cc2c2134e8ca532395a05d23, type: 3}
+  unitPrefabs:
+  - {fileID: 110404, guid: cf019f0a53bcb9048a32c2c0e746d571, type: 3}
+  - {fileID: 6396763520416579192, guid: d233242219fcdbd429a6076ea5440812, type: 3}

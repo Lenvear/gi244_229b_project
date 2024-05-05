@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1265816802440437802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6100493410532674795}
-  m_Layer: 0
-  m_Name: StartPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6100493410532674795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265816802440437802}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4554875360383990336}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4606762607695283890
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +33,7 @@ Transform:
   - {fileID: 4622487372244533091}
   - {fileID: 1863642197354245835}
   - {fileID: 7736175335910841836}
-  - {fileID: 6100493410532674795}
+  - {fileID: 611031494800479637}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6004894648429260350
@@ -79,17 +48,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edfe18f224e8eb439bdf118f82f2ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nation: 0
-  food: 0
-  wood: 0
-  gold: 0
-  stone: 0
+  nation: 1
+  food: 1000
+  wood: 600
+  gold: 500
+  stone: 200
   aliveUnits: []
-  aliveBuildings: []
+  aliveBuildings:
+  - {fileID: 0}
   unitsParent: {fileID: 4622487372244533091}
   buildingsParent: {fileID: 1863642197354245835}
   ghostBuildingParent: {fileID: 7736175335910841836}
-  startPosition: {fileID: 6100493410532674795}
+  startPosition: {fileID: 611031494800479637}
+  newResourceRange: 50
+  buildingPrefabs:
+  - {fileID: 2991012978293428157, guid: 4b453bdd8a4d5654cb3d082eebbcecff, type: 3}
+  - {fileID: 2609207242791517721, guid: 0269d0d01f43d7547b510b5a58b3e117, type: 3}
+  - {fileID: 6712598103280381623, guid: ff6aa27150651c742b8e9f00275527d4, type: 3}
+  - {fileID: 2991012978293428157, guid: 02b141b262167aa46b8700b9da8fdc88, type: 3}
+  ghostbuildingPrefabs:
+  - {fileID: 2991012978293428157, guid: 7150525e307a76248b78c29becf1d592, type: 3}
+  - {fileID: 2609207242791517721, guid: 7b005eeb6bbb78d428f9dae747d0125d, type: 3}
+  - {fileID: 6712598103280381623, guid: 52672a66ba2c5334fad50b6acb7063f1, type: 3}
+  - {fileID: 2991012978293428157, guid: 7150525e307a76248b78c29becf1d592, type: 3}
+  unitPrefabs:
+  - {fileID: 110404, guid: cf019f0a53bcb9048a32c2c0e746d571, type: 3}
+  - {fileID: 1659822698518960, guid: df7b70dc902fe7d45a8253a5bbaff665, type: 3}
+  - {fileID: 1659822698518960, guid: 6ae6fb084e6d3e448bbe926f0bf4eb73, type: 3}
 --- !u!1 &5478505303531785521
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +101,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4554875360383990336}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7024380685155584321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611031494800479637}
+  m_Layer: 0
+  m_Name: StartPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &611031494800479637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024380685155584321}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.546875, y: 32.81476, z: 8.324913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
